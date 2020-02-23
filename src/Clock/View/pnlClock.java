@@ -87,6 +87,7 @@ public class pnlClock extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable2.setName("tblClockIndex"); // NOI18N
         jScrollPane2.setViewportView(jTable2);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
