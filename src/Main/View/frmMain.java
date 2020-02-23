@@ -40,12 +40,16 @@ this.setVisible(true);
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        pnlCustomer1 = new Customer.View.pnlCustomer();
-        pnlContract1 = new Contract.View.pnlContract();
+        pnlInvoice1 = new Invoice.View.pnlInvoice();
+        pnlInvoice2 = new Invoice.View.pnlInvoice();
         pnlClock1 = new Clock.View.pnlClock();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
 
         jButton1.setText("jButton1");
 
@@ -53,14 +57,40 @@ this.setVisible(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.addTab("tab1", pnlCustomer1);
-        jTabbedPane1.addTab("tab2", pnlContract1);
-        jTabbedPane1.addTab("tab3", pnlClock1);
+        javax.swing.GroupLayout pnlInvoice1Layout = new javax.swing.GroupLayout(pnlInvoice1);
+        pnlInvoice1.setLayout(pnlInvoice1Layout);
+        pnlInvoice1Layout.setHorizontalGroup(
+            pnlInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
+        );
+        pnlInvoice1Layout.setVerticalGroup(
+            pnlInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInvoice1Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jMenu1.setText("File");
+        jTabbedPane1.addTab("Hóa đơn hàng tháng", pnlInvoice1);
+        jTabbedPane1.addTab("Số điện", pnlClock1);
+
+        jMenu1.setText("Tiện ích");
+
+        jMenuItem3.setText("Tính tiền điện");
+        jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setText("Đóng tiền điện");
+        jMenu1.add(jMenuItem4);
+
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Tài khoản");
+
+        jMenuItem5.setText("Đổi mật khẩu");
+        jMenu2.add(jMenuItem5);
+
+        jMenuItem6.setText("Đăng xuất");
+        jMenu2.add(jMenuItem6);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -69,11 +99,11 @@ this.setVisible(true);
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
         );
 
         pack();
@@ -90,9 +120,13 @@ this.setVisible(true);
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JTabbedPane jTabbedPane1;
     private Clock.View.pnlClock pnlClock1;
-    private Contract.View.pnlContract pnlContract1;
-    private Customer.View.pnlCustomer pnlCustomer1;
+    private Invoice.View.pnlInvoice pnlInvoice1;
+    private Invoice.View.pnlInvoice pnlInvoice2;
     // End of variables declaration//GEN-END:variables
 }
