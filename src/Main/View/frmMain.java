@@ -40,9 +40,9 @@ this.setVisible(true);
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        pnlCustomer1 = new Customer.View.pnlCustomer();
         pnlInvoice1 = new Invoice.View.pnlInvoice();
         pnlInvoice2 = new Invoice.View.pnlInvoice();
-        pnlCustomer1 = new Customer.View.pnlCustomer();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -58,6 +58,8 @@ this.setVisible(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTabbedPane1.addTab("Khách hàng", pnlCustomer1);
+
         javax.swing.GroupLayout pnlInvoice1Layout = new javax.swing.GroupLayout(pnlInvoice1);
         pnlInvoice1.setLayout(pnlInvoice1Layout);
         pnlInvoice1Layout.setHorizontalGroup(
@@ -72,7 +74,6 @@ this.setVisible(true);
         );
 
         jTabbedPane1.addTab("Hóa đơn", pnlInvoice1);
-        jTabbedPane1.addTab("Khách hàng", pnlCustomer1);
 
         jMenu1.setText("Tiện ích");
 
