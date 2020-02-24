@@ -42,11 +42,12 @@ this.setVisible(true);
         jTabbedPane1 = new javax.swing.JTabbedPane();
         pnlInvoice1 = new Invoice.View.pnlInvoice();
         pnlInvoice2 = new Invoice.View.pnlInvoice();
-        pnlClock1 = new Clock.View.pnlClock();
+        pnlCustomer1 = new Customer.View.pnlCustomer();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -61,25 +62,33 @@ this.setVisible(true);
         pnlInvoice1.setLayout(pnlInvoice1Layout);
         pnlInvoice1Layout.setHorizontalGroup(
             pnlInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
+            .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
         );
         pnlInvoice1Layout.setVerticalGroup(
             pnlInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInvoice1Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlInvoice1Layout.createSequentialGroup()
+                .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
-        jTabbedPane1.addTab("Hóa đơn hàng tháng", pnlInvoice1);
-        jTabbedPane1.addTab("Số điện", pnlClock1);
+        jTabbedPane1.addTab("Hóa đơn", pnlInvoice1);
+        jTabbedPane1.addTab("Khách hàng", pnlCustomer1);
 
         jMenu1.setText("Tiện ích");
 
-        jMenuItem3.setText("Tính tiền điện");
-        jMenu1.add(jMenuItem3);
+        jMenuItem1.setText("Tạo hợp đồng");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
 
-        jMenuItem4.setText("Đóng tiền điện");
+        jMenuItem4.setText("Thu tiền điện");
         jMenu1.add(jMenuItem4);
+
+        jMenuItem2.setText("Đồng hồ điện");
+        jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
 
@@ -99,15 +108,19 @@ this.setVisible(true);
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,12 +133,13 @@ this.setVisible(true);
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private Clock.View.pnlClock pnlClock1;
+    private Customer.View.pnlCustomer pnlCustomer1;
     private Invoice.View.pnlInvoice pnlInvoice1;
     private Invoice.View.pnlInvoice pnlInvoice2;
     // End of variables declaration//GEN-END:variables
