@@ -5,12 +5,10 @@
         <group>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmPayBill.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmAccountingMonney.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Login/View/frmSignUp.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Login/View/frmLogin.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Clock/View/pnlClock.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main/View/frmMain.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/View/pnlCustomer.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/View/pnlInvoice.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmCreateContract.java</file>
         </group>
     </open-files>
 </project-private>
