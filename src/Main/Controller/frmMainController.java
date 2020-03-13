@@ -6,6 +6,8 @@
 package Main.Controller;
 
 
+import BaseClass.BaseController;
+import Customer.Controller.pnlCustomerController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
@@ -17,15 +19,35 @@ import Main.View.frmMain;
  *
  * @author admin
  */
-public class frmMainController implements ActionListener{
-    private JFrame frame ;
+public class frmMainController extends BaseController{
+    private frmMain frmMain ;
+    pnlCustomerController customerController;
     public frmMainController(frmMain frame){
-        frame.setVisible(true);
+       frmMain = new frmMain();
+             
+        customerController = new pnlCustomerController(frmMain.getPnlCustomer());
     }
-    
+
+    public frmMainController() {
+        frmMain= new frmMain();
+          customerController = new pnlCustomerController(frmMain.getPnlCustomer());
+        
+        
+    }
+    public void showForm(boolean visible){
+        frmMain.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frmMain.setVisible(visible);
+    }
+
     @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void innitEvent() {
+        
+    }
+
+    @Override
+    public void innitView() {
+        
     }
     
+ 
 }

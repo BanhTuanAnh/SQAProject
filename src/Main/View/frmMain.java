@@ -6,25 +6,143 @@
 package Main.View;
 
 import Customer.View.pnlCustomer;
+import Invoice.View.pnlInvoice;
 import java.awt.Window;
 import javax.swing.GroupLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 
 /**
  *
  * @author admin
  */
 public class frmMain extends javax.swing.JFrame {
-    private JPanel pnlCustomer ;
+
+    public pnlCustomer getPnlCustomer() {
+        return pnlCustomer;
+    }
+
+    public void setPnlCustomer(pnlCustomer pnlCustomer) {
+        this.pnlCustomer = pnlCustomer;
+    }
+
+    
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
+    }
+
+    public JMenu getjMenu1() {
+        return jMenu1;
+    }
+
+    public void setjMenu1(JMenu jMenu1) {
+        this.jMenu1 = jMenu1;
+    }
+
+    public JMenu getjMenu2() {
+        return jMenu2;
+    }
+
+    public void setjMenu2(JMenu jMenu2) {
+        this.jMenu2 = jMenu2;
+    }
+
+    public JMenuBar getjMenuBar1() {
+        return jMenuBar1;
+    }
+
+    public void setjMenuBar1(JMenuBar jMenuBar1) {
+        this.jMenuBar1 = jMenuBar1;
+    }
+
+    public JMenuItem getjMenuItem1() {
+        return jMenuItem1;
+    }
+
+    public void setjMenuItem1(JMenuItem jMenuItem1) {
+        this.jMenuItem1 = jMenuItem1;
+    }
+
+    public JMenuItem getjMenuItem2() {
+        return jMenuItem2;
+    }
+
+    public void setjMenuItem2(JMenuItem jMenuItem2) {
+        this.jMenuItem2 = jMenuItem2;
+    }
+
+    public JMenuItem getjMenuItem4() {
+        return jMenuItem4;
+    }
+
+    public void setjMenuItem4(JMenuItem jMenuItem4) {
+        this.jMenuItem4 = jMenuItem4;
+    }
+
+    public JMenuItem getjMenuItem5() {
+        return jMenuItem5;
+    }
+
+    public void setjMenuItem5(JMenuItem jMenuItem5) {
+        this.jMenuItem5 = jMenuItem5;
+    }
+
+    public JMenuItem getjMenuItem6() {
+        return jMenuItem6;
+    }
+
+    public void setjMenuItem6(JMenuItem jMenuItem6) {
+        this.jMenuItem6 = jMenuItem6;
+    }
+
+    public JTabbedPane getjTabbedPane1() {
+        return jTabbedPane1;
+    }
+
+    public void setjTabbedPane1(JTabbedPane jTabbedPane1) {
+        this.jTabbedPane1 = jTabbedPane1;
+    }
+
+
+    public pnlInvoice getPnlInvoice1() {
+        return pnlInvoice1;
+    }
+
+    public void setPnlInvoice1(pnlInvoice pnlInvoice1) {
+        this.pnlInvoice1 = pnlInvoice1;
+    }
+
+    public pnlInvoice getPnlInvoice2() {
+        return pnlInvoice2;
+    }
+
     /**
      * Creates new form FRMMain
      */
+    public void setPnlInvoice2(pnlInvoice pnlInvoice2) {    
+        this.pnlInvoice2 = pnlInvoice2;
+    }
+
     public frmMain() {
         initComponents();
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-this.setUndecorated(true);
-this.setVisible(true);
 
     }
   
@@ -40,7 +158,7 @@ this.setVisible(true);
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        pnlCustomer1 = new Customer.View.pnlCustomer();
+        pnlCustomer = new Customer.View.pnlCustomer();
         pnlInvoice1 = new Invoice.View.pnlInvoice();
         pnlInvoice2 = new Invoice.View.pnlInvoice();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -58,13 +176,13 @@ this.setVisible(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.addTab("Khách hàng", pnlCustomer1);
+        jTabbedPane1.addTab("Khách hàng", pnlCustomer);
 
         javax.swing.GroupLayout pnlInvoice1Layout = new javax.swing.GroupLayout(pnlInvoice1);
         pnlInvoice1.setLayout(pnlInvoice1Layout);
         pnlInvoice1Layout.setHorizontalGroup(
             pnlInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
+            .addComponent(pnlInvoice2, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
         );
         pnlInvoice1Layout.setVerticalGroup(
             pnlInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,11 +227,11 @@ this.setVisible(true);
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         pack();
@@ -140,7 +258,7 @@ this.setVisible(true);
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private Customer.View.pnlCustomer pnlCustomer1;
+    private Customer.View.pnlCustomer pnlCustomer;
     private Invoice.View.pnlInvoice pnlInvoice1;
     private Invoice.View.pnlInvoice pnlInvoice2;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,14 @@
  */
 package Customer.View;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JToolBar;
+
 /**
  *
  * @author admin
@@ -16,9 +24,106 @@ public class pnlCustomer extends javax.swing.JPanel {
      */
     public pnlCustomer() {
         initComponents();
-        this.setVisible(true);
     }
 
+    public JButton getBtnViewElectricIndex() {
+        return btnViewElectricIndex;
+    }
+
+    public void setBtnViewElectricIndex(JButton btnViewElectricIndex) {
+        this.btnViewElectricIndex = btnViewElectricIndex;
+    }
+
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public void setjButton3(JButton jButton3) {
+        this.jButton3 = jButton3;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public void setjComboBox1(JComboBox<String> jComboBox1) {
+        this.jComboBox1 = jComboBox1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JTable getTblClockDetail() {
+        return tblClockDetail;
+    }
+
+    public void setTblClockDetail(JTable tblClockDetail) {
+        this.tblClockDetail = tblClockDetail;
+    }
+
+    public JTable getTblCustomer() {
+        return tblCustomer;
+    }
+
+    public void setTblCustomer(JTable tblCustomer) {
+        this.tblCustomer = tblCustomer;
+    }
+
+    public JTable getjTable1() {
+        return tblCustomer;
+    }
+
+    public void setjTable1(JTable jTable1) {
+        this.tblCustomer = jTable1;
+    }
+
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
+    }
+
+    public JToolBar getjToolBar1() {
+        return jToolBar1;
+    }
+
+    public void setjToolBar1(JToolBar jToolBar1) {
+        this.jToolBar1 = jToolBar1;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,29 +134,25 @@ public class pnlCustomer extends javax.swing.JPanel {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        btnViewElectricIndex = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblCustomer = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tblClockDetail = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
 
         jToolBar1.setRollover(true);
 
-        jButton1.setText("Xem chi tiết");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(jButton1);
+        jButton4.setText("Tạo hợp đồng");
+        jButton4.setFocusable(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(jButton4);
 
         jButton2.setText("Sửa thông tin");
         jButton2.setFocusable(false);
@@ -59,7 +160,23 @@ public class pnlCustomer extends javax.swing.JPanel {
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton2);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        btnViewElectricIndex.setText("Xem chi tiết sử dụng điện");
+        btnViewElectricIndex.setFocusable(false);
+        btnViewElectricIndex.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnViewElectricIndex.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnViewElectricIndex.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnViewElectricIndexMouseClicked(evt);
+            }
+        });
+        btnViewElectricIndex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewElectricIndexActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(btnViewElectricIndex);
+
+        tblCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"KH001", "Bành Tuấn Anh", "0168222199", "Hà Nội", "DH001", "Đã thanh toán"},
                 {null, null, null, null, null, null},
@@ -78,24 +195,26 @@ public class pnlCustomer extends javax.swing.JPanel {
                 return types [columnIndex];
             }
         });
-        jTable1.setName("tblCustomer"); // NOI18N
-        jScrollPane1.setViewportView(jTable1);
+        tblCustomer.setName("tblCustomer"); // NOI18N
+        tblCustomer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblCustomerMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblCustomer);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Danh sách khách hàng");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tblClockDetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "9", "900000", "Đã thanh toán"},
-                {"2", "10", "120000", "Chưa thanh toán"},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Tháng", "Số KWH", "Số tiền phải đóng", "Trạng thái"
+                "Tháng", "Chỉ số đồng hồ", "Số KWH", "Ngày ghi", "Trạng thái"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tblClockDetail);
 
         jTextField1.setToolTipText("Nhập mã hoặc tên khách hàng");
 
@@ -120,8 +239,8 @@ public class pnlCustomer extends javax.swing.JPanel {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,22 +259,31 @@ public class pnlCustomer extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnViewElectricIndexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewElectricIndexActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnViewElectricIndexActionPerformed
+
+    private void tblCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCustomerMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblCustomerMouseClicked
+
+    private void btnViewElectricIndexMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewElectricIndexMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnViewElectricIndexMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnViewElectricIndex;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JTable tblClockDetail;
+    private javax.swing.JTable tblCustomer;
     // End of variables declaration//GEN-END:variables
 }
