@@ -29,5 +29,5 @@ public class ColumnName {
     public static String ClockIndexID = "ClockIndexID";
      public static String CreatedDate = "CreatedDate";
      public static String ClockDetailID = "ClockDetailID";
-     public static String PreClockDetailIndex = "PreClockDetailIndex";
+     public static String PreClockDetailIndex = "PreClockIndex";
 }

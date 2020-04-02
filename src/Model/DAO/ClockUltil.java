@@ -36,18 +36,19 @@ public class ClockUltil {
         }
         return clockDetails;
     }
-         public static List<ElectricIndex> GetElectricIndexs(int customerID) throws SQLException, ClassNotFoundException{
-        String stoName = "ProGetElectricIndexs";
+         public static List<ElectricIndex> GetElectricIndexsByCustomer(int customerID) throws SQLException, ClassNotFoundException{
+        String stoName = "ProGetElectricIndexByCustomer";
         ResultSet rs =DBUltil.ExcuteQuery(stoName,customerID);
          List<ElectricIndex> electricIndexs = new ArrayList<>();
         while(rs.next()){
             ElectricIndex electricIndex = new ElectricIndex();
-              electricIndex.setClockDetailID(rs.getInt(ColumnName.ClockDetailID));
+              electricIndex.setClockDetailID(rs.getInt(ColumnName.ClockIndexID));
                     electricIndex.setAmount(rs.getFloat(ColumnName.Amount));
                 electricIndex.setClockIndex(rs.getInt(ColumnName.ClockIndex));
                 electricIndex.setMonth(rs.getNString(ColumnName.Period));
                 electricIndex.setKWHNumber(rs.getInt(ColumnName.KWHNumber));
                 electricIndex.setPreClockIndex(rs.getInt(ColumnName.PreClockDetailIndex));
+                electricIndex.setCreatedDate(rs.getDate(ColumnName.CreatedDate));
                  electricIndex.setState(rs.getNString(ColumnName.State));
                 electricIndexs.add(electricIndex);
         }

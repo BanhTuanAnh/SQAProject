@@ -6,7 +6,6 @@
 package Customer.Controller;
 
 import BaseClass.BaseController;
-import BaseClass.ColumnName;
 import ClockDetail.Controller.ClockDetailController;
 import Customer.View.pnlCustomer;
 import Model.DAO.AccountObjectUltil;
@@ -66,8 +65,8 @@ public class pnlCustomerController extends BaseController{
     
     }
             private void btnViewElectricIndexMouseClicked(MouseEvent evt) {
-                 int selectedIndex = this.pnlCustomer.getTblCustomer().getSelectedRow();
-            if(selectedIndex>0) {
+            int selectedIndex = this.pnlCustomer.getTblCustomer().getSelectedRow();
+            if(selectedIndex>=0) {
                 Customer customer = customers.get(selectedIndex);
                 ClockDetailController clockDetailController = new ClockDetailController(customer);
                 clockDetailController.showForm(true);

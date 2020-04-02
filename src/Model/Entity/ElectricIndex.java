@@ -6,6 +6,7 @@
 package Model.Entity;
 
 import BaseClass.AppObject;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,13 +16,17 @@ import java.util.List;
  */
 public class ElectricIndex extends AppObject {
     private String month;
+      private int numMonth;
+        private int numYear;
     private int clockIndex;
     private int clockDetailID;
     private float amount;
     private String state;
     private int preClockIndex;
     private int KWHNumber;
-    private String props[]={"Tháng","Số điện","Số điện kỳ trước","Số KWH","Số tiền","Trạng thái"};
+    private Date createdDate;
+    private String clockCode;
+    private String props[]={"Tháng","Số điện","Số điện kỳ trước","Số KWH","Số tiền","Ngày tạo","Trạng thái"};
 
     @Override
     public String[] GetProps() {
@@ -36,8 +41,42 @@ public class ElectricIndex extends AppObject {
         data.add(this.preClockIndex);
         data.add(this.KWHNumber);
         data.add(amount);
+        data.add(createdDate);
         data.add(this.state);
         return data;
+    }
+
+    public String getClockCode() {
+        return clockCode;
+    }
+
+    public void setClockCode(String clockCode) {
+        this.clockCode = clockCode;
+    }
+
+   
+    public int getNumMonth() {
+        return numMonth;
+    }
+
+    public void setNumMonth(int numMonth) {
+        this.numMonth = numMonth;
+    }
+
+    public int getNumYear() {
+        return numYear;
+    }
+
+    public void setNumYear(int numYear) {
+        this.numYear = numYear;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
     }
 
     public String getMonth() {

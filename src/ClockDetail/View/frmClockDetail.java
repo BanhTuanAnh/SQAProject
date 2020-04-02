@@ -5,6 +5,7 @@
  */
 package ClockDetail.View;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 
@@ -30,10 +31,11 @@ public class frmClockDetail extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        formDialog = new javax.swing.JDialog();
         jToolBar1 = new javax.swing.JToolBar();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnUpdateEI = new javax.swing.JButton();
+        btnAddEI = new javax.swing.JButton();
+        btnDeleteEI = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblClockDetail = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -41,27 +43,43 @@ public class frmClockDetail extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         lblCustomerName = new javax.swing.JLabel();
 
+        javax.swing.GroupLayout formDialogLayout = new javax.swing.GroupLayout(formDialog.getContentPane());
+        formDialog.getContentPane().setLayout(formDialogLayout);
+        formDialogLayout.setHorizontalGroup(
+            formDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        formDialogLayout.setVerticalGroup(
+            formDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jToolBar1.setRollover(true);
 
-        jButton2.setText("Cập nhật số điện");
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton2);
+        btnUpdateEI.setText("Cập nhật số điện");
+        btnUpdateEI.setFocusable(false);
+        btnUpdateEI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdateEI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnUpdateEI);
 
-        jButton3.setText("Thêm số điện");
-        jButton3.setFocusable(false);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton3);
+        btnAddEI.setText("Thêm số điện");
+        btnAddEI.setFocusable(false);
+        btnAddEI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAddEI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAddEI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddEIMouseClicked(evt);
+            }
+        });
+        jToolBar1.add(btnAddEI);
 
-        jButton4.setText("Xóa số điện");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton4);
+        btnDeleteEI.setText("Xóa số điện");
+        btnDeleteEI.setFocusable(false);
+        btnDeleteEI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDeleteEI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnDeleteEI);
 
         tblClockDetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,7 +96,7 @@ public class frmClockDetail extends javax.swing.JFrame {
 
         jButton1.setText("Tìm kiếm");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tháng", "Trạng thái"}));
 
         lblCustomerName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblCustomerName.setText("Bành Tuấn Anh");
@@ -92,14 +110,15 @@ public class frmClockDetail extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(lblCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1)
+                        .addGap(0, 0, 0)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -120,6 +139,10 @@ public class frmClockDetail extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddEIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddEIMouseClicked
+     
+    }//GEN-LAST:event_btnAddEIMouseClicked
+
     public JLabel getLblCustomerName() {
         return lblCustomerName;
     }
@@ -135,13 +158,38 @@ public class frmClockDetail extends javax.swing.JFrame {
     public void setTblClockDetail(JTable tblClockDetail) {
         this.tblClockDetail = tblClockDetail;
     }
+
+    public JButton getBtnAddEI() {
+        return btnAddEI;
+    }
+
+    public void setBtnAddEI(JButton btnAddEI) {
+        this.btnAddEI = btnAddEI;
+    }
+
+    public JButton getBtnDeleteEI() {
+        return btnDeleteEI;
+    }
+
+    public void setBtnDeleteEI(JButton btnDeleteEI) {
+        this.btnDeleteEI = btnDeleteEI;
+    }
+
+    public JButton getBtnUpdateEI() {
+        return btnUpdateEI;
+    }
+
+    public void setBtnUpdateEI(JButton btnUpdateEI) {
+        this.btnUpdateEI = btnUpdateEI;
+    }
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddEI;
+    private javax.swing.JButton btnDeleteEI;
+    private javax.swing.JButton btnUpdateEI;
+    private javax.swing.JDialog formDialog;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;

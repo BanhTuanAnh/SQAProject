@@ -63,8 +63,8 @@ public class DBUltil {
             }
             resultSet= prepareStatement.executeQuery();
         } catch (SQLException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
+            // TODO Auto-generated catch block
+
         }    
         return resultSet;
     }
@@ -73,18 +73,16 @@ public class DBUltil {
         int rowAffected=0;
         try {
             if( args.length>0){
-                
+                for (int i = 0; i < args.length; i++) {
+                     stoName=stoName.concat(" ?");
+                     if(i<args.length-1){
+                         stoName=stoName.concat(",");
+                     }      
+                }
             }
             PreparedStatement ps = conn.prepareStatement(stoName, Statement.RETURN_GENERATED_KEYS);
-            if( args.length>0){
-                for (int i = 0; i < args.length; i++) {
-                       
-                      setParam(ps,i + 1, args[i]);
-                }
-            }  
             rowAffected = ps.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
         }
         return rowAffected;
     }	
