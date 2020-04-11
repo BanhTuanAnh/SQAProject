@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 package ClockDetail.Controller;
-
+import Main.Controller.frmMainController;
 import BaseClass.BaseController;
 import ClockDetail.View.frmClockDetail;
 import Customer.View.pnlCustomer;
+import Model.DAO.ClockDetailUltil;
 import Model.DAO.ClockUltil;
 import Model.Entity.Customer;
 import Model.Entity.ElectricIndex;
@@ -27,7 +28,7 @@ public class ClockDetailController extends BaseController {
 
     private Customer customer;
     private frmClockDetail frmClockDetail;
-
+    private List<ElectricIndex> list;
     public void showForm(boolean visible) {
         frmClockDetail.setLocationRelativeTo(null);
         frmClockDetail.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -37,13 +38,6 @@ public class ClockDetailController extends BaseController {
     public ClockDetailController(Customer customer) {
         frmClockDetail = new frmClockDetail();
         this.customer = customer;
-        innitEvent();
-        innitView();
-    }
-
-    public ClockDetailController() {
-        frmClockDetail = new frmClockDetail();
-        this.customer = new Customer();
         innitEvent();
         innitView();
     }
@@ -58,7 +52,19 @@ public class ClockDetailController extends BaseController {
         });
         this.frmClockDetail.getBtnUpdateEI().addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEditEIMouseClicked(evt);
+                try {
+                    btnEditEIMouseClicked(evt);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ClockDetailController.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ClockDetailController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+        });
+                this.frmClockDetail.getBtnBack().addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBackMouseClicked(evt);
             }
 
         });
@@ -68,19 +74,66 @@ public class ClockDetailController extends BaseController {
                 frmClockDetail.setVisible(false);
             }
         });
+        this.frmClockDetail.getBtnDeleteEI().addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                try {
+                    btnDeleteEIClicked(evt);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ClockDetailController.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ClockDetailController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
 
+        });
+    }
+    private void btnDeleteEIClicked(MouseEvent evt) throws SQLException, ClassNotFoundException{
+        int index =this.frmClockDetail.getTblClockDetail().getSelectedRow();
+        
+        Object[] options = {"Có","Không"};
+        int n = JOptionPane.showOptionDialog(frmClockDetail, 
+                "Bạn có muốn xóa chỉ số " + this.list.get(index).getStrMonth()+ ": " + this.list.get(index).getClockIndex() ,
+                "Xác nhận",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+        if(n == 0 ){
+            long id =this.list.get(index).getClockDetailID();
+            int rowAffected = ClockDetailUltil.DeleteElectricIndexByID(id);
+            if(rowAffected>0){
+                JOptionPane.showMessageDialog(frmClockDetail,"Xóa thành công");
+                this.innitView();
+            }
+            else{
+                 JOptionPane.showMessageDialog(frmClockDetail,"Xóa thất bại");
+            }
+        }
+    }
+    private void btnBackMouseClicked(MouseEvent evt) {
+       frmMainController frmMainController = new frmMainController();
+                    frmMainController.showForm(true);
+                    this.showForm(false);
     }
 
-    private void btnAddEIMouseClicked(MouseEvent evt) {
-        InsertUpdateClockController dialog = new InsertUpdateClockController(frmClockDetail);
+    private void btnAddEIMouseClicked(MouseEvent evt){
+        InsertUpdateClockController dialog = new InsertUpdateClockController(frmClockDetail,customer);
         dialog.showForm(true, frmClockDetail);
         if (dialog.success) {
-            JOptionPane.showMessageDialog(frmClockDetail, "Cất thành công");
+            this.innitView();
         }
     }
 
-    private void btnEditEIMouseClicked(MouseEvent evt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void btnEditEIMouseClicked(MouseEvent evt) throws SQLException, ClassNotFoundException {
+        int index=frmClockDetail.getTblClockDetail().getSelectedRow();
+        if(index<0){
+            JOptionPane.showMessageDialog(frmClockDetail,"Bạn phải chọn 1 chỉ số");
+        }
+        else {
+        ElectricIndex eIndex = ClockDetailUltil.GetElectricIndexByID(list.get(index).getClockDetailID());
+        InsertUpdateClockController dialog = new InsertUpdateClockController(frmClockDetail,eIndex,customer);
+        dialog.showForm(true, frmClockDetail);
+        if (dialog.success) {
+            this.innitView();
+        }
+        }
+        
     }
 
     @Override
@@ -91,7 +144,7 @@ public class ClockDetailController extends BaseController {
             this.frmClockDetail.getLblCustomerName().setText("");
         }
         int customerID = customer.getId();
-        List<ElectricIndex> list;
+       
 
         try {
             list = ClockUltil.GetElectricIndexsByCustomer(customerID);

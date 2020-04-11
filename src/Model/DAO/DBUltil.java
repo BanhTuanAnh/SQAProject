@@ -80,7 +80,13 @@ public class DBUltil {
                      }      
                 }
             }
+            
             PreparedStatement ps = conn.prepareStatement(stoName, Statement.RETURN_GENERATED_KEYS);
+            if( args.length>0){
+                for (int i = 0; i < args.length; i++) {
+                      ps=setParam(ps,i + 1, args[i]);
+                }
+            }
             rowAffected = ps.executeUpdate();
         } catch (SQLException e) {
         }

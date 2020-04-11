@@ -36,6 +36,7 @@ public class frmClockDetail extends javax.swing.JFrame {
         btnUpdateEI = new javax.swing.JButton();
         btnAddEI = new javax.swing.JButton();
         btnDeleteEI = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblClockDetail = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -81,6 +82,12 @@ public class frmClockDetail extends javax.swing.JFrame {
         btnDeleteEI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(btnDeleteEI);
 
+        btnBack.setText("Trở lại");
+        btnBack.setFocusable(false);
+        btnBack.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnBack.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnBack);
+
         tblClockDetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"1", "123", "9", "900000", "Đã thanh toán"},
@@ -117,8 +124,7 @@ public class frmClockDetail extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addGap(0, 0, 0)))
+                        .addComponent(jButton1)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -149,6 +155,14 @@ public class frmClockDetail extends javax.swing.JFrame {
 
     public void setLblCustomerName(JLabel lblCustomerName) {
         this.lblCustomerName = lblCustomerName;
+    }
+
+    public JButton getBtnBack() {
+        return btnBack;
+    }
+
+    public void setBtnBack(JButton btnBack) {
+        this.btnBack = btnBack;
     }
 
     public JTable getTblClockDetail() {
@@ -186,6 +200,7 @@ public class frmClockDetail extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddEI;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDeleteEI;
     private javax.swing.JButton btnUpdateEI;
     private javax.swing.JDialog formDialog;

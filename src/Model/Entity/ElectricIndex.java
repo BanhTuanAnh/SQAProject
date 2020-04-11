@@ -6,7 +6,7 @@
 package Model.Entity;
 
 import BaseClass.AppObject;
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +17,13 @@ import java.util.List;
 public class ElectricIndex extends AppObject {
     private String month;
       private int numMonth;
-        private int numYear;
-    private int clockIndex;
-    private int clockDetailID;
+        private long numYear;
+    private long clockIndex;
+    private long clockDetailID;
     private float amount;
     private String state;
-    private int preClockIndex;
-    private int KWHNumber;
+    private long preClockIndex;
+    private long KWHNumber;
     private Date createdDate;
     private String clockCode;
     private String props[]={"Tháng","Số điện","Số điện kỳ trước","Số KWH","Số tiền","Ngày tạo","Trạng thái"};
@@ -54,19 +54,7 @@ public class ElectricIndex extends AppObject {
         this.clockCode = clockCode;
     }
 
-   
-    public int getNumMonth() {
-        return numMonth;
-    }
-
-    public void setNumMonth(int numMonth) {
-        this.numMonth = numMonth;
-    }
-
-    public int getNumYear() {
-        return numYear;
-    }
-
+  
     public void setNumYear(int numYear) {
         this.numYear = numYear;
     }
@@ -79,7 +67,7 @@ public class ElectricIndex extends AppObject {
         this.createdDate = createdDate;
     }
 
-    public String getMonth() {
+    public String getStrMonth() {
         return month;
     }
 
@@ -87,19 +75,13 @@ public class ElectricIndex extends AppObject {
         this.month = month;
     }
 
-    public int getClockIndex() {
-        return clockIndex;
-    }
-
-    public void setClockIndex(int clockIndex) {
+   
+    public void setClockIndex(long clockIndex) {
         this.clockIndex = clockIndex;
     }
 
-    public int getClockDetailID() {
-        return clockDetailID;
-    }
-
-    public void setClockDetailID(int clockDetailID) {
+  
+    public void setClockDetailID(long clockDetailID) {
         this.clockDetailID = clockDetailID;
     }
 
@@ -119,20 +101,64 @@ public class ElectricIndex extends AppObject {
         this.state = state;
     }
 
-    public int getPreClockIndex() {
-        return preClockIndex;
-    }
+   
 
     public void setPreClockIndex(int preClockIndex) {
         this.preClockIndex = preClockIndex;
     }
 
-    public int getKWHNumber() {
-        return KWHNumber;
-    }
+  
 
     public void setKWHNumber(int KWHNumber) {
         this.KWHNumber = KWHNumber;
+    }
+
+    public int getNumMonth() {
+        return numMonth;
+    }
+
+    public void setNumMonth(int numMonth) {
+        this.numMonth = numMonth;
+    }
+
+    public long getNumYear() {
+        return numYear;
+    }
+
+    public void setNumYear(long numYear) {
+        this.numYear = numYear;
+    }
+
+    public long getClockIndex() {
+        return clockIndex;
+    }
+
+    public long getClockDetailID() {
+        return clockDetailID;
+    }
+
+    public long getPreClockIndex() {
+        return preClockIndex;
+    }
+
+    public void setPreClockIndex(long preClockIndex) {
+        this.preClockIndex = preClockIndex;
+    }
+
+    public long getKWHNumber() {
+        return KWHNumber;
+    }
+
+    public void setKWHNumber(long KWHNumber) {
+        this.KWHNumber = KWHNumber;
+    }
+
+    public String[] getProps() {
+        return props;
+    }
+
+    public void setProps(String[] props) {
+        this.props = props;
     }
     
 }

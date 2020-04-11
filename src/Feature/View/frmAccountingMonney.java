@@ -5,6 +5,9 @@
  */
 package Feature.View;
 
+import Feature.View.Bussiness.pnlCommonAccounting;
+import Feature.View.Common.pnlBussinessAccounting;
+
 /**
  *
  * @author admin
@@ -18,6 +21,22 @@ public class frmAccountingMonney extends javax.swing.JFrame {
         initComponents();
     }
 
+    public pnlBussinessAccounting getBussinessAccounting1() {
+        return bussinessAccounting1;
+    }
+
+    public void setBussinessAccounting1(pnlBussinessAccounting bussinessAccounting1) {
+        this.bussinessAccounting1 = bussinessAccounting1;
+    }
+
+    public pnlCommonAccounting getCommonAccounting1() {
+        return commonAccounting1;
+    }
+
+    public void setCommonAccounting1(pnlCommonAccounting commonAccounting1) {
+        this.commonAccounting1 = commonAccounting1;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,17 +46,39 @@ public class frmAccountingMonney extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        commonAccounting1 = new Feature.View.Bussiness.pnlCommonAccounting();
+        bussinessAccounting1 = new Feature.View.Common.pnlBussinessAccounting();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTabbedPane1.addTab("Sinh hoạt", commonAccounting1);
+        jTabbedPane1.addTab("Sản xuất", bussinessAccounting1);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Tính tiền điện");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(167, 167, 167)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +120,9 @@ public class frmAccountingMonney extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private Feature.View.Common.pnlBussinessAccounting bussinessAccounting1;
+    private Feature.View.Bussiness.pnlCommonAccounting commonAccounting1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }

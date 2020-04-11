@@ -24,6 +24,14 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
         initComponents();
     }
 
+    public JButton getBtnCancel() {
+        return btnCancel;
+    }
+
+    public void setBtnCancel(JButton btnCancel) {
+        this.btnCancel = btnCancel;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,10 +54,10 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
         jLabel8 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         dteCreatedDate = new javax.swing.JFormattedTextField();
-        txtClockCode = new javax.swing.JFormattedTextField();
-        jButton2 = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         numClockIndex = new javax.swing.JFormattedTextField();
         numClockIndexID = new javax.swing.JFormattedTextField();
+        txtClockCode = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -75,7 +83,7 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
 
         jLabel4.setText("Số công tơ điện");
 
-        numYear.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
+        numYear.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0"))));
 
         cboMonth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12" }));
 
@@ -89,16 +97,13 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        dteCreatedDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        dteCreatedDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
 
-        txtClockCode.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        btnCancel.setText("Hủy bỏ");
 
-        jButton2.setText("Hủy bỏ");
+        numClockIndex.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0"))));
 
-        numClockIndex.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        numClockIndex.setFocusable(false);
-
-        numClockIndexID.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        numClockIndexID.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0"))));
         numClockIndexID.setFocusable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -115,7 +120,7 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
+                        .addComponent(btnCancel))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -141,9 +146,9 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel8))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dteCreatedDate, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtClockCode, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(dteCreatedDate, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                    .addComponent(txtClockCode)))
                             .addComponent(numClockIndexID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
@@ -179,14 +184,14 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
                                     .addComponent(jLabel8))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtClockCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6))))
+                                    .addComponent(jLabel6)
+                                    .addComponent(txtClockCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(11, 11, 11)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnSave)
-                        .addComponent(jButton2)))
+                        .addComponent(btnCancel)))
                 .addContainerGap())
         );
 
@@ -213,13 +218,11 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
      * @param args the command line arguments
      */
 
-    public JFormattedTextField getCboCreatedDate() {
+    public JFormattedTextField getdteCreatedDate() {
         return dteCreatedDate;
     }
 
-    public void setCboCreatedDate(JFormattedTextField cboCreatedDate) {
-        this.dteCreatedDate = cboCreatedDate;
-    }
+
 
     public JComboBox<String> getCboMonth() {
         return cboMonth;
@@ -253,7 +256,7 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
         this.numYear = numYear;
     }
 
-    public JFormattedTextField getTxtClockCode() {
+    public JTextField getTxtClockCode() {
         return txtClockCode;
     }
 
@@ -267,10 +270,10 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<String> cboMonth;
     private javax.swing.JFormattedTextField dteCreatedDate;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -283,6 +286,6 @@ public class frmInsertUpdateClockIndex extends javax.swing.JDialog {
     private javax.swing.JFormattedTextField numClockIndex;
     private javax.swing.JFormattedTextField numClockIndexID;
     private javax.swing.JFormattedTextField numYear;
-    private javax.swing.JFormattedTextField txtClockCode;
+    private javax.swing.JTextField txtClockCode;
     // End of variables declaration//GEN-END:variables
 }

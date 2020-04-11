@@ -14,31 +14,6 @@
     </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ti&#x1ec7;n &#xed;ch"/>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="T&#x1ea1;o h&#x1ee3;p &#x111;&#x1ed3;ng"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Thu ti&#x1ec1;n &#x111;i&#x1ec7;n"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&#x110;&#x1ed3;ng h&#x1ed3; &#x111;i&#x1ec7;n"/>
-              </Properties>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
             <Property name="text" type="java.lang.String" value="T&#xe0;i kho&#x1ea3;n"/>
@@ -55,6 +30,11 @@
               </Properties>
             </MenuItem>
           </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuCaculate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="T&#xed;nh ti&#x1ec1;n &#x111;i&#x1ec7;n"/>
+          </Properties>
         </Menu>
       </SubComponents>
     </Menu>

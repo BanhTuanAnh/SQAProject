@@ -49,14 +49,15 @@ public class frmMain extends javax.swing.JFrame {
         this.jButton2 = jButton2;
     }
 
-    public JMenu getjMenu1() {
-        return jMenu1;
+    public JMenu getMnuCaculate() {
+        return mnuCaculate;
     }
 
-    public void setjMenu1(JMenu jMenu1) {
-        this.jMenu1 = jMenu1;
+    public void setMnuCaculate(JMenu mnuCaculate) {
+        this.mnuCaculate = mnuCaculate;
     }
 
+    
     public JMenu getjMenu2() {
         return jMenu2;
     }
@@ -73,30 +74,9 @@ public class frmMain extends javax.swing.JFrame {
         this.jMenuBar1 = jMenuBar1;
     }
 
-    public JMenuItem getjMenuItem1() {
-        return jMenuItem1;
-    }
+   
 
-    public void setjMenuItem1(JMenuItem jMenuItem1) {
-        this.jMenuItem1 = jMenuItem1;
-    }
-
-    public JMenuItem getjMenuItem2() {
-        return jMenuItem2;
-    }
-
-    public void setjMenuItem2(JMenuItem jMenuItem2) {
-        this.jMenuItem2 = jMenuItem2;
-    }
-
-    public JMenuItem getjMenuItem4() {
-        return jMenuItem4;
-    }
-
-    public void setjMenuItem4(JMenuItem jMenuItem4) {
-        this.jMenuItem4 = jMenuItem4;
-    }
-
+  
     public JMenuItem getjMenuItem5() {
         return jMenuItem5;
     }
@@ -134,6 +114,8 @@ public class frmMain extends javax.swing.JFrame {
         return pnlInvoice2;
     }
 
+   
+    
     /**
      * Creates new form FRMMain
      */
@@ -162,13 +144,10 @@ public class frmMain extends javax.swing.JFrame {
         pnlInvoice1 = new Invoice.View.pnlInvoice();
         pnlInvoice2 = new Invoice.View.pnlInvoice();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        mnuCaculate = new javax.swing.JMenu();
 
         jButton1.setText("jButton1");
 
@@ -193,24 +172,6 @@ public class frmMain extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Hóa đơn", pnlInvoice1);
 
-        jMenu1.setText("Tiện ích");
-
-        jMenuItem1.setText("Tạo hợp đồng");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
-
-        jMenuItem4.setText("Thu tiền điện");
-        jMenu1.add(jMenuItem4);
-
-        jMenuItem2.setText("Đồng hồ điện");
-        jMenu1.add(jMenuItem2);
-
-        jMenuBar1.add(jMenu1);
-
         jMenu2.setText("Tài khoản");
 
         jMenuItem5.setText("Đổi mật khẩu");
@@ -220,6 +181,9 @@ public class frmMain extends javax.swing.JFrame {
         jMenu2.add(jMenuItem6);
 
         jMenuBar1.add(jMenu2);
+
+        mnuCaculate.setText("Tính tiền điện");
+        jMenuBar1.add(mnuCaculate);
 
         setJMenuBar(jMenuBar1);
 
@@ -237,10 +201,6 @@ public class frmMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -249,15 +209,12 @@ public class frmMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JMenu mnuCaculate;
     private Customer.View.pnlCustomer pnlCustomer;
     private Invoice.View.pnlInvoice pnlInvoice1;
     private Invoice.View.pnlInvoice pnlInvoice2;

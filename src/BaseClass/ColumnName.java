@@ -30,4 +30,11 @@ public class ColumnName {
      public static String CreatedDate = "CreatedDate";
      public static String ClockDetailID = "ClockDetailID";
      public static String PreClockDetailIndex = "PreClockIndex";
+     public static String RowAffacted = "RowAffacted";
+    public static String Month = "Month";
+    public static String Year = "Year";
+    public static String Tax="Tax";
+      public static String TotalAmount="TotalAmount";
+    public static String Method = "Method";
+    public static String Taget = "Taget";
 }

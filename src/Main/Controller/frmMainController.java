@@ -7,12 +7,15 @@ package Main.Controller;
 
 
 import BaseClass.BaseController;
+import ClockDetail.Controller.ClockDetailController;
 import Customer.Controller.pnlCustomerController;
+import Feature.Controller.AccountingController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
 import javax.swing.JFrame;
 import Main.View.frmMain;
+import java.awt.event.MouseEvent;
 
 
 /**
@@ -23,15 +26,17 @@ public class frmMainController extends BaseController{
     private frmMain frmMain ;
     pnlCustomerController customerController;
     public frmMainController(frmMain frame){
-       frmMain = new frmMain();
-             
+       frmMain = new frmMain();  
         customerController = new pnlCustomerController(frmMain.getPnlCustomer());
+        this.innitEvent();
+        this.innitView();
     }
 
     public frmMainController() {
         frmMain= new frmMain();
-          customerController = new pnlCustomerController(frmMain.getPnlCustomer());
-        
+            this.innitEvent();
+        this.innitView();
+        customerController = new pnlCustomerController(frmMain.getPnlCustomer());
         
     }
     public void showForm(boolean visible){
@@ -41,9 +46,18 @@ public class frmMainController extends BaseController{
 
     @Override
     public void innitEvent() {
+        this.frmMain.getMnuCaculate().addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mnuCaulateMouseClicked(evt);
+            }
+        });
         
     }
-
+    private void mnuCaulateMouseClicked(MouseEvent evt) {
+        AccountingController AController = new AccountingController();
+                AController.showForm(true);
+       }
     @Override
     public void innitView() {
         
