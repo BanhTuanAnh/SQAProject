@@ -14,6 +14,7 @@
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/ClockDetailUltil.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/View/frmInvoiceDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/DBUltil.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Enum/StringEnum.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/View/frmCustomerDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/ClockDetail/View/frmClockDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/CaculateElectricAmountUltil.java</file>
@@ -29,6 +30,7 @@
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/Employee.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Login/Controller/LoginController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/Controller/frmInvoiceDetailController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/BaseClass/TableName.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/Controller/pnlInvoiceController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/ClockDetail/View/frmInsertUpdateClockIndex.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main/View/frmMain.java</file>
