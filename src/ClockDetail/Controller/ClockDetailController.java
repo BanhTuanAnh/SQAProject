@@ -143,7 +143,7 @@ public class ClockDetailController extends BaseController {
         } else {
             this.frmClockDetail.getLblCustomerName().setText("");
         }
-        int customerID = customer.getId();
+        long customerID = customer.getId();
        
 
         try {

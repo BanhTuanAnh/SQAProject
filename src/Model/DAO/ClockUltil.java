@@ -6,6 +6,7 @@
 package Model.DAO;
 
 import BaseClass.ColumnName;
+import BaseClass.TableName;
 import Model.Entity.ClockDetail;
 import Model.Entity.Customer;
 import Model.Entity.ElectricIndex;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 public class ClockUltil {
 
-    public static List<ClockDetail> GetCloclDetails(int customerID) throws SQLException, ClassNotFoundException {
+    public static List<ClockDetail> GetCloclDetails(long customerID) throws SQLException, ClassNotFoundException {
         String stoName = "ProGetClockDetails";
         ResultSet rs = DBUltil.ExcuteQuery(stoName, customerID);
         List<ClockDetail> clockDetails = new ArrayList<>();
@@ -38,7 +39,7 @@ public class ClockUltil {
         return clockDetails;
     }
 
-    public static List<ElectricIndex> GetElectricIndexsByCustomer(int customerID) throws SQLException, ClassNotFoundException {
+    public static List<ElectricIndex> GetElectricIndexsByCustomer(long customerID) throws SQLException, ClassNotFoundException {
         String stoName = "ProGetElectricIndexByCustomer";
         ResultSet rs = DBUltil.ExcuteQuery(stoName, customerID);
         List<ElectricIndex> electricIndexs = new ArrayList<>();
@@ -56,5 +57,11 @@ public class ClockUltil {
         }
         return electricIndexs;
     }
-
+    public static String GetNewClockCode () throws SQLException, ClassNotFoundException{
+        String tableName =TableName.Clock;
+        String code = "DH";
+        int id = DBUltil.GetNewID(tableName);
+        code = code + id + "";
+        return code;
+    }
 }

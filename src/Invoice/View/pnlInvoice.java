@@ -5,6 +5,9 @@
  */
 package Invoice.View;
 
+import javax.swing.JButton;
+import javax.swing.JTable;
+
 /**
  *
  * @author admin
@@ -28,11 +31,11 @@ public class pnlInvoice extends javax.swing.JPanel {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        tblAddInvoice = new javax.swing.JButton();
+        btnEditInvoice = new javax.swing.JButton();
+        btnDeleteInvoice = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblInvoice = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
@@ -40,25 +43,25 @@ public class pnlInvoice extends javax.swing.JPanel {
 
         jToolBar1.setRollover(true);
 
-        jButton1.setText("Tạo hóa đơn");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton1);
+        tblAddInvoice.setText("Tạo hóa đơn");
+        tblAddInvoice.setFocusable(false);
+        tblAddInvoice.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tblAddInvoice.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(tblAddInvoice);
 
-        jButton2.setText("Sửa hóa đơn");
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton2);
+        btnEditInvoice.setText("Sửa hóa đơn");
+        btnEditInvoice.setFocusable(false);
+        btnEditInvoice.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditInvoice.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnEditInvoice);
 
-        jButton3.setText("Xóa hóa đơn");
-        jButton3.setFocusable(false);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton3);
+        btnDeleteInvoice.setText("Xóa hóa đơn");
+        btnDeleteInvoice.setFocusable(false);
+        btnDeleteInvoice.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDeleteInvoice.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnDeleteInvoice);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblInvoice.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"HD001", "1", "Bành Tuấn Anh", "Hóa đơn điện tháng 1", "900000", "02/02/2020"},
                 {null, null, null, null, null, null},
@@ -69,7 +72,7 @@ public class pnlInvoice extends javax.swing.JPanel {
                 "Mã hóa đơn", "Tháng", "Tên khách hàng", "Diễn giải", "Số tiền", "Ngày tạo"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblInvoice);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Hóa đơn");
@@ -112,17 +115,48 @@ public class pnlInvoice extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public JButton getBtnDeleteInvoice() {
+        return btnDeleteInvoice;
+    }
+
+    public void setBtnDeleteInvoice(JButton btnDeleteInvoice) {
+        this.btnDeleteInvoice = btnDeleteInvoice;
+    }
+
+    public JButton getBtnEditInvoice() {
+        return btnEditInvoice;
+    }
+
+    public void setBtnEditInvoice(JButton btnEditInvoice) {
+        this.btnEditInvoice = btnEditInvoice;
+    }
+
+    public JButton getTblAddInvoice() {
+        return tblAddInvoice;
+    }
+
+    public void setTblAddInvoice(JButton tblAddInvoice) {
+        this.tblAddInvoice = tblAddInvoice;
+    }
+
+    public JTable getTblInvoice() {
+        return tblInvoice;
+    }
+
+    public void setTblInvoice(JTable tblInvoice) {
+        this.tblInvoice = tblInvoice;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnDeleteInvoice;
+    private javax.swing.JButton btnEditInvoice;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JButton tblAddInvoice;
+    private javax.swing.JTable tblInvoice;
     // End of variables declaration//GEN-END:variables
 }

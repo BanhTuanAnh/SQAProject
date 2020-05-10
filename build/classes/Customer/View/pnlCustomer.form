@@ -62,7 +62,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btnAddContract">
           <Properties>
             <Property name="text" type="java.lang.String" value="T&#x1ea1;o h&#x1ee3;p &#x111;&#x1ed3;ng"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -70,7 +70,7 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnDeleteContract">
           <Properties>
             <Property name="text" type="java.lang.String" value="X&#xf3;a h&#x1ee3;p &#x111;&#x1ed3;ng"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -78,7 +78,7 @@
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnEditContract">
           <Properties>
             <Property name="text" type="java.lang.String" value="S&#x1eed;a th&#xf4;ng tin"/>
             <Property name="focusable" type="boolean" value="false"/>

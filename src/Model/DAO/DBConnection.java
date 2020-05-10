@@ -17,7 +17,7 @@ public class DBConnection {
 
     private static Connection conn = null;
     public static String hostName = "localhost";
-    public static String sqlInstanceName = "SQLSERVERBTANH1";
+    public static String sqlInstanceName = "BTANH2020";
     public static String database = "PTIT_SQA_EMS";
     public static String userName = "";
     public static String password = "";
@@ -49,7 +49,7 @@ public class DBConnection {
             // Ví dụ:
             // jdbc:sqlserver://ServerIp:1433/SQLEXPRESS;databaseName=simplehr
             String connectionURL
-                    = "jdbc:sqlserver://" + hostName + ":53064"
+                    = "jdbc:sqlserver://" + hostName + ":3495"
                     + ";instance=" + sqlInstanceName + ";databaseName=" + database + ";integratedSecurity=true";
 
             conn = DriverManager.getConnection(connectionURL);
@@ -71,7 +71,7 @@ public class DBConnection {
             // Cấu trúc URL Connection dành cho SQLServer
             // Ví dụ:
             // jdbc:sqlserver://ServerIp:1433/SQLEXPRESS;databaseName=simplehr
-            String connectionURL = "jdbc:sqlserver://" + hostName + ":53064"
+            String connectionURL = "jdbc:sqlserver://" + hostName + ":3495"
                     + ";instance=" + sqlInstanceName + ";databaseName=" + database;
             conn = DriverManager.getConnection(connectionURL, userName,
                     password);

@@ -26,6 +26,30 @@ public class pnlCustomer extends javax.swing.JPanel {
         initComponents();
     }
 
+    public JButton getBtnAddContract() {
+        return btnAddContract;
+    }
+
+    public void setBtnAddContract(JButton btnAddContract) {
+        this.btnAddContract = btnAddContract;
+    }
+
+    public JButton getBtnDeleteContract() {
+        return btnDeleteContract;
+    }
+
+    public void setBtnDeleteContract(JButton btnDeleteContract) {
+        this.btnDeleteContract = btnDeleteContract;
+    }
+
+    public JButton getBtnEditContract() {
+        return btnEditContract;
+    }
+
+    public void setBtnEditContract(JButton btnEditContract) {
+        this.btnEditContract = btnEditContract;
+    }
+
     public JButton getBtnViewElectricIndex() {
         return btnViewElectricIndex;
     }
@@ -36,11 +60,11 @@ public class pnlCustomer extends javax.swing.JPanel {
 
 
     public JButton getjButton2() {
-        return jButton2;
+        return btnEditContract;
     }
 
     public void setjButton2(JButton jButton2) {
-        this.jButton2 = jButton2;
+        this.btnEditContract = jButton2;
     }
 
     public JButton getjButton3() {
@@ -134,9 +158,9 @@ public class pnlCustomer extends javax.swing.JPanel {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnAddContract = new javax.swing.JButton();
+        btnDeleteContract = new javax.swing.JButton();
+        btnEditContract = new javax.swing.JButton();
         btnViewElectricIndex = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCustomer = new javax.swing.JTable();
@@ -149,23 +173,23 @@ public class pnlCustomer extends javax.swing.JPanel {
 
         jToolBar1.setRollover(true);
 
-        jButton4.setText("Tạo hợp đồng");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton4);
+        btnAddContract.setText("Tạo hợp đồng");
+        btnAddContract.setFocusable(false);
+        btnAddContract.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAddContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnAddContract);
 
-        jButton1.setText("Xóa hợp đồng");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton1);
+        btnDeleteContract.setText("Xóa hợp đồng");
+        btnDeleteContract.setFocusable(false);
+        btnDeleteContract.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDeleteContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnDeleteContract);
 
-        jButton2.setText("Sửa thông tin");
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton2);
+        btnEditContract.setText("Sửa thông tin");
+        btnEditContract.setFocusable(false);
+        btnEditContract.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnEditContract);
 
         btnViewElectricIndex.setText("Xem chi tiết sử dụng điện");
         btnViewElectricIndex.setFocusable(false);
@@ -280,12 +304,12 @@ public class pnlCustomer extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddContract;
+    private javax.swing.JButton btnDeleteContract;
+    private javax.swing.JButton btnEditContract;
     private javax.swing.JButton btnViewElectricIndex;
     private javax.swing.JComboBox<String> cboSearchField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

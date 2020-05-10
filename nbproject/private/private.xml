@@ -6,26 +6,39 @@
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/AccountObjectUltil.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/Controller/pnlCustomerController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main/Controller/frmMainController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/Controller/frmCustomerDetailController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/DBConnection.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/Common/pnlBussinessAccounting.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmCreateContract.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/View/frmDetailCustomer.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/ClockDetailUltil.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/View/frmInvoiceDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/DBUltil.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/View/frmCustomerDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/ClockDetail/View/frmClockDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/CaculateElectricAmountUltil.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/ClockUltil.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/Customer.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/CaculateResult.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/ClockDetail.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/Bussiness/pnlCommonAccounting.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/View/pnlInvoice.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/ClockDetail/Controller/InsertUpdateClockController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/BaseClass/BaseController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/Employee.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Login/Controller/LoginController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/Controller/frmInvoiceDetailController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/Controller/pnlInvoiceController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/ClockDetail/View/frmInsertUpdateClockIndex.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main/View/frmMain.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/View/pnlCustomer.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/Controller/BussinessAccountingController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/Controller/AccountingController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/ElectricIndex.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/InvoiceUltil.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/Controller/CommonAccountingController.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/Invoice.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/ClockDetail/Controller/ClockDetailController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmAccountingMonney.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/BaseClass/ColumnName.java</file>

@@ -55,7 +55,7 @@ public class ElectricIndex extends AppObject {
     }
 
   
-    public void setNumYear(int numYear) {
+    public void setNumYear(long numYear) {
         this.numYear = numYear;
     }
 
@@ -125,9 +125,6 @@ public class ElectricIndex extends AppObject {
         return numYear;
     }
 
-    public void setNumYear(long numYear) {
-        this.numYear = numYear;
-    }
 
     public long getClockIndex() {
         return clockIndex;

@@ -44,13 +44,13 @@ public class ClockDetailUltil {
             eIndex.setClockDetailID(rs.getInt(ColumnName.ClockIndexID));
             eIndex.setClockIndex(rs.getInt(ColumnName.ClockIndex));
             eIndex.setNumMonth(rs.getInt(ColumnName.Month));
-            eIndex.setNumYear(rs.getLong(ColumnName.Year));
+            eIndex.setNumYear(rs.getInt(ColumnName.Year));
             eIndex.setCreatedDate(rs.getDate(ColumnName.CreatedDate));
             eIndex.setClockCode(rs.getNString(ColumnName.ClockCode));
         }
          return eIndex;
     }
-        public static int DeleteElectricIndexByID(long clockDetailID) throws SQLException, ClassNotFoundException {
+    public static int DeleteElectricIndexByID(long clockDetailID) throws SQLException, ClassNotFoundException {
          String stoName = "ProDeleteClockDetailByID";
          ResultSet rs = DBUltil.ExcuteQuery(stoName,clockDetailID);
           int rowAffected= 0;

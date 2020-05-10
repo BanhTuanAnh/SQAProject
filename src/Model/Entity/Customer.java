@@ -21,13 +21,32 @@ public class Customer extends AppObject{
     private String address;
     private String clockCode;
     private String phoneNumber;
-    private String[] props ={"Mã","Tên khách hàng","Mã đồng hồ","Số điện thoại", "Địa chỉ"} ;
+    private String contractType;
+    private int intcontractType;
+    private int intVoltType;
+    private String[] props ={"Mã","Tên khách hàng","Loại hợp đồng","Mã đồng hồ","Số điện thoại", "Địa chỉ"} ;
 
+    public int getIntcontractType() {
+        return intcontractType;
+    }
+
+    public void setIntcontractType(int intcontractType) {
+        this.intcontractType = intcontractType;
+    }
+
+    public int getIntVoltType() {
+        return intVoltType;
+    }
+
+    public void setIntVoltType(int intVoltType) {
+        this.intVoltType = intVoltType;
+    }
+    
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId( int id) {
         this.id = id;
     }
 
@@ -92,12 +111,21 @@ public class Customer extends AppObject{
         return this.props;
     }
 
+    public String getContractType() {
+        return contractType;
+    }
+
+    public void setContractType(String contractType) {
+        this.contractType = contractType;
+    }
+
     @Override
     public List<Object> ToList() {
    
      List<Object> data = new ArrayList<>();
         data.add(code);
         data.add(name);
+        data.add(contractType);
        data.add(clockCode);
         data.add(phoneNumber);
         data.add(address);
