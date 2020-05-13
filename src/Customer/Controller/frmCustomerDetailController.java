@@ -29,7 +29,7 @@ import javax.swing.JOptionPane;
  * @author User
  */
 public class frmCustomerDetailController extends BaseClass.BaseController {
-
+    
     private frmMain frmMain;
     private frmCustomerDetail frmDetail;
     private int mode;
@@ -164,6 +164,7 @@ public class frmCustomerDetailController extends BaseClass.BaseController {
             this.success = false;
             JOptionPane.showMessageDialog(frmDetail, "Thông tin số điện sai");
         }
+        
 
     }
 
