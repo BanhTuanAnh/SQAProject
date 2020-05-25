@@ -9,6 +9,7 @@ import BaseClass.BaseController;
 import ClockDetail.Controller.ClockDetailController;
 import ClockDetail.Controller.InsertUpdateClockController;
 import Customer.View.pnlCustomer;
+import Main.View.frmMain;
 import Model.DAO.AccountObjectUltil;
 import Model.DAO.ClockDetailUltil;
 import Model.DAO.ClockUltil;
@@ -29,18 +30,21 @@ import javax.swing.table.DefaultTableModel;
  * @author admin
  */
 public class pnlCustomerController extends BaseController {
-
+    private frmMain frmParent;
     private pnlCustomer pnlCustomer;
     private List<Customer> customers;
 
-    public pnlCustomerController() {
+    public pnlCustomerController(frmMain frmParent) {
+         this.frmParent=frmParent;
         this.pnlCustomer = new pnlCustomer();
+        this.frmParent= null;
         customers = new ArrayList<>();
         innitEvent();
         innitView();
     }
 
-    public pnlCustomerController(pnlCustomer pnlCustomer) {
+    public pnlCustomerController(pnlCustomer pnlCustomer,frmMain frmParent) {
+        this.frmParent=frmParent;
         this.pnlCustomer = pnlCustomer;
         innitEvent();
         innitView();
@@ -105,8 +109,8 @@ public class pnlCustomerController extends BaseController {
         }
         else {
         Customer customer = AccountObjectUltil.GetCustomerByID(customers.get(index).getId());
-         frmCustomerDetailController detailController = new frmCustomerDetailController(customer);
-        detailController.showForm(true);
+         frmCustomerDetailController detailController = new frmCustomerDetailController(customer,this.frmParent);
+        detailController.showForm(true,this.frmParent);
         if (detailController.success) {
             this.innitView();
         }
@@ -161,8 +165,8 @@ public class pnlCustomerController extends BaseController {
         }
     }
     private void btnAddContractClicked(MouseEvent evt) {
-        frmCustomerDetailController detailController = new frmCustomerDetailController();
-        detailController.showForm(true);
+        frmCustomerDetailController detailController = new frmCustomerDetailController(frmParent);
+        detailController.showForm(true,this.frmParent);
         if (detailController.success) {
             this.innitView();
         }

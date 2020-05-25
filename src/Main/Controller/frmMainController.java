@@ -27,7 +27,7 @@ public class frmMainController extends BaseController{
     pnlCustomerController customerController;
     public frmMainController(frmMain frame){
        frmMain = new frmMain();  
-        customerController = new pnlCustomerController(frmMain.getPnlCustomer());
+        customerController = new pnlCustomerController(frmMain.getPnlCustomer(),this.frmMain);
         this.innitEvent();
         this.innitView();
     }
@@ -36,7 +36,7 @@ public class frmMainController extends BaseController{
         frmMain= new frmMain();
             this.innitEvent();
         this.innitView();
-        customerController = new pnlCustomerController(frmMain.getPnlCustomer());
+        customerController = new pnlCustomerController(frmMain.getPnlCustomer(),this.frmMain);
         
     }
     public void showForm(boolean visible){

@@ -18,7 +18,7 @@ import javax.swing.JToolBar;
  * @author admin
  */
 public class pnlCustomer extends javax.swing.JPanel {
-
+    
     /**
      * Creates new form pnlCustomer
      */

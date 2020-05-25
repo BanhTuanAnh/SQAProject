@@ -110,7 +110,7 @@ public class InsertUpdateClockController extends BaseClass.BaseController {
         cal.setTime(date);
 //        int month = cal.get(Calendar.MONTH) + 1;
 //        int year = cal.get(Calendar.YEAR);
-        electricIndex.setNumYear((long) this.frmInsertUpdateClockIndex.getNumYear().getValue());
+        electricIndex.setNumYear((int) this.frmInsertUpdateClockIndex.getNumYear().getValue());
         int month = this.frmInsertUpdateClockIndex.getCboMonth().getSelectedIndex()+1;
         electricIndex.setNumMonth(month);
         electricIndex.setClockCode(this.frmInsertUpdateClockIndex.getTxtClockCode().getText());
@@ -132,7 +132,7 @@ public class InsertUpdateClockController extends BaseClass.BaseController {
         
         this.frmInsertUpdateClockIndex.getNumClockIndexID().setVisible(false);
         if(this.electricIndex != null){
-            this.frmInsertUpdateClockIndex.getNumYear().setValue(electricIndex.getNumMonth());
+            this.frmInsertUpdateClockIndex.getNumYear().setValue(electricIndex.getNumYear());
             this.frmInsertUpdateClockIndex.getdteCreatedDate().setValue(electricIndex.getCreatedDate());
             this.frmInsertUpdateClockIndex.getNumClockIndex().setValue(electricIndex.getClockIndex());
             this.frmInsertUpdateClockIndex.getNumClockIndexID().setValue(electricIndex.getClockDetailID());

@@ -9,6 +9,7 @@ import ClockDetail.Controller.InsertUpdateClockController;
 import ClockDetail.View.frmClockDetail;
 import ClockDetail.View.frmInsertUpdateClockIndex;
 import Customer.View.frmCustomerDetail;
+import Customer.View.frmDetailCustomer;
 import Model.Entity.Customer;
 import Model.Entity.ElectricIndex;
 import Main.View.frmMain;
@@ -31,13 +32,14 @@ import javax.swing.JOptionPane;
 public class frmCustomerDetailController extends BaseClass.BaseController {
     
     private frmMain frmMain;
-    private frmCustomerDetail frmDetail;
+    private frmDetailCustomer frmDetail;
     private int mode;
     public boolean success;
     private Customer customer;
 
-    public frmCustomerDetailController(Customer customer) {
-        this.frmDetail = new frmCustomerDetail();
+    public frmCustomerDetailController(Customer customer,frmMain frmMain) {
+        this.frmMain = frmMain;
+        this.frmDetail = new frmDetailCustomer(this.frmMain);
         this.innitEvent();
         if (customer != null) {
             this.customer = customer;
@@ -48,23 +50,21 @@ public class frmCustomerDetailController extends BaseClass.BaseController {
         this.innitView();
     }
 
-    public frmCustomerDetailController() {
-        this.frmDetail = new frmCustomerDetail();
+    public frmCustomerDetailController(frmMain frmMain) {
+        this.frmMain = frmMain;
+        this.frmDetail = new frmDetailCustomer(this.frmMain);
         this.customer = null;
         this.innitEvent();
         this.innitView();
 
     }
 
-    public void showForm(boolean visible, frmClockDetail frmParent) {
+    public void showForm(boolean visible, frmMain frmParent) {
 
         this.frmDetail.setLocationRelativeTo(frmParent);
         frmDetail.setVisible(visible);
     }
 
-    public void showForm(boolean visible) {
-        frmDetail.setVisible(visible);
-    }
 
     @Override
 
@@ -98,7 +98,7 @@ public class frmCustomerDetailController extends BaseClass.BaseController {
     }
 
     private void btnCancelClicked(MouseEvent evt) throws SQLException, ClassNotFoundException {
-        showForm(false);
+        showForm(false,this.frmMain);
     }
     private void cboContractItemStateChanged(java.awt.event.ItemEvent evt) {   
          frmDetail.getCboVolt().setVisible(true);

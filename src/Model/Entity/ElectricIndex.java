@@ -17,7 +17,7 @@ import java.util.List;
 public class ElectricIndex extends AppObject {
     private String month;
       private int numMonth;
-        private long numYear;
+        private int numYear;
     private long clockIndex;
     private long clockDetailID;
     private float amount;
@@ -55,7 +55,7 @@ public class ElectricIndex extends AppObject {
     }
 
   
-    public void setNumYear(long numYear) {
+    public void setNumYear(int numYear) {
         this.numYear = numYear;
     }
 
