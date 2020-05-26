@@ -150,7 +150,7 @@ public class pnlCustomerController extends BaseController {
         
         Object[] options = {"Có","Không"};
         int n = JOptionPane.showOptionDialog(pnlCustomer, 
-                "Bạn có muốn xóa hợp đồng với khách hàng" + this.customers.get(index).getClockCode()+ ": " + this.customers.get(index).getName(),
+                "Bạn có muốn xóa hợp đồng với khách hàng " + this.customers.get(index).getCode()+ ": " + this.customers.get(index).getName(),
                 "Xác nhận",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
         if(n == 0 ){
             long id =this.customers.get(index).getId();

@@ -159,8 +159,8 @@ public class pnlCustomer extends javax.swing.JPanel {
 
         jToolBar1 = new javax.swing.JToolBar();
         btnAddContract = new javax.swing.JButton();
-        btnDeleteContract = new javax.swing.JButton();
         btnEditContract = new javax.swing.JButton();
+        btnDeleteContract = new javax.swing.JButton();
         btnViewElectricIndex = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCustomer = new javax.swing.JTable();
@@ -179,17 +179,17 @@ public class pnlCustomer extends javax.swing.JPanel {
         btnAddContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(btnAddContract);
 
-        btnDeleteContract.setText("Xóa hợp đồng");
-        btnDeleteContract.setFocusable(false);
-        btnDeleteContract.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnDeleteContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(btnDeleteContract);
-
         btnEditContract.setText("Sửa thông tin");
         btnEditContract.setFocusable(false);
         btnEditContract.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEditContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(btnEditContract);
+
+        btnDeleteContract.setText("Xóa hợp đồng");
+        btnDeleteContract.setFocusable(false);
+        btnDeleteContract.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDeleteContract.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnDeleteContract);
 
         btnViewElectricIndex.setText("Xem chi tiết sử dụng điện");
         btnViewElectricIndex.setFocusable(false);
@@ -235,7 +235,7 @@ public class pnlCustomer extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblCustomer);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("Danh sách khách hàng");
+        jLabel2.setText("Danh sách hợp đồng");
 
         tblClockDetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -81,7 +81,7 @@ public class frmCustomerDetailController extends BaseClass.BaseController {
             this.frmDetail.getCboContract().setSelectedIndex((int) customer.getIntcontractType());
             this.frmDetail.getTxtCustomerCode().setText(customer.getCode());
         } else {
-            this.frmDetail.getNumCustomerID().setValue(-1);
+            this.frmDetail.getNumCustomerID().setValue((int)-1);
             this.frmDetail.getCboContract().setSelectedIndex(0);
             this.frmDetail.getCboVolt().setSelectedIndex(0);
             try {

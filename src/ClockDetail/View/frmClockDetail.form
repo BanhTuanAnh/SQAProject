@@ -85,14 +85,6 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnUpdateEI">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t s&#x1ed1; &#x111;i&#x1ec7;n"/>
-            <Property name="focusable" type="boolean" value="false"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-            <Property name="verticalTextPosition" type="int" value="3"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="btnAddEI">
           <Properties>
             <Property name="text" type="java.lang.String" value="Th&#xea;m s&#x1ed1; &#x111;i&#x1ec7;n"/>
@@ -103,6 +95,14 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAddEIMouseClicked"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnUpdateEI">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="S&#x1eed;a s&#x1ed1; &#x111;i&#x1ec7;n"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnDeleteEI">
           <Properties>

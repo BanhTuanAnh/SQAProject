@@ -46,9 +46,9 @@ public class pnlInvoiceController extends BaseClass.BaseController{
     @Override
     public void innitEvent() {
         this.pnlInvoice.getBtnEditInvoice().addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEditInvoiceClicked(evt);
-            }
+//            public void mouseClicked(java.awt.event.MouseEvent evt) {
+//                btnEditInvoiceClicked(evt);
+//            }
 
 
         });

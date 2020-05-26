@@ -19,7 +19,7 @@ public class ElectricIndex extends AppObject {
       private int numMonth;
         private int numYear;
     private long clockIndex;
-    private long clockDetailID;
+    private int clockDetailID;
     private float amount;
     private String state;
     private long preClockIndex;
@@ -81,7 +81,7 @@ public class ElectricIndex extends AppObject {
     }
 
   
-    public void setClockDetailID(long clockDetailID) {
+    public void setClockDetailID(int clockDetailID) {
         this.clockDetailID = clockDetailID;
     }
 
@@ -103,10 +103,6 @@ public class ElectricIndex extends AppObject {
 
    
 
-    public void setPreClockIndex(int preClockIndex) {
-        this.preClockIndex = preClockIndex;
-    }
-
   
 
     public void setKWHNumber(int KWHNumber) {
@@ -121,7 +117,7 @@ public class ElectricIndex extends AppObject {
         this.numMonth = numMonth;
     }
 
-    public long getNumYear() {
+    public int getNumYear() {
         return numYear;
     }
 
@@ -130,7 +126,7 @@ public class ElectricIndex extends AppObject {
         return clockIndex;
     }
 
-    public long getClockDetailID() {
+    public int getClockDetailID() {
         return clockDetailID;
     }
 

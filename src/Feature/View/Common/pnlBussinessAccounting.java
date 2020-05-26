@@ -141,7 +141,7 @@ public class pnlBussinessAccounting extends javax.swing.JPanel {
         cboVolt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dưới 6 kV", "Từ 6 - Dưới 22kV", "Từ 22 - Dưới 110kV", "Trên 110kV" }));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Tiền điện sản xuất");
+        jLabel4.setText("Tính tiền điện sản xuất");
 
         jLabel5.setText("Kết quả");
 

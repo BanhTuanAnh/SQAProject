@@ -33,8 +33,8 @@ public class frmClockDetail extends javax.swing.JFrame {
 
         formDialog = new javax.swing.JDialog();
         jToolBar1 = new javax.swing.JToolBar();
-        btnUpdateEI = new javax.swing.JButton();
         btnAddEI = new javax.swing.JButton();
+        btnUpdateEI = new javax.swing.JButton();
         btnDeleteEI = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -59,12 +59,6 @@ public class frmClockDetail extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        btnUpdateEI.setText("Cập nhật số điện");
-        btnUpdateEI.setFocusable(false);
-        btnUpdateEI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnUpdateEI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(btnUpdateEI);
-
         btnAddEI.setText("Thêm số điện");
         btnAddEI.setFocusable(false);
         btnAddEI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -75,6 +69,12 @@ public class frmClockDetail extends javax.swing.JFrame {
             }
         });
         jToolBar1.add(btnAddEI);
+
+        btnUpdateEI.setText("Sửa số điện");
+        btnUpdateEI.setFocusable(false);
+        btnUpdateEI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdateEI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToolBar1.add(btnUpdateEI);
 
         btnDeleteEI.setText("Xóa số điện");
         btnDeleteEI.setFocusable(false);

@@ -102,7 +102,7 @@ public class InsertUpdateClockController extends BaseClass.BaseController {
     private void btnSaveMouseClicked(MouseEvent evt) throws SQLException, ClassNotFoundException {
 
         this.electricIndex = new ElectricIndex();
-        electricIndex.setClockDetailID((long) this.frmInsertUpdateClockIndex.getNumClockIndexID().getValue());
+        electricIndex.setClockDetailID((int) this.frmInsertUpdateClockIndex.getNumClockIndexID().getValue());
         electricIndex.setClockIndex((long)this.frmInsertUpdateClockIndex.getNumClockIndex().getValue());
         Calendar cal = Calendar.getInstance();
         Date date = (Date) this.frmInsertUpdateClockIndex.getdteCreatedDate().getValue();
@@ -139,7 +139,7 @@ public class InsertUpdateClockController extends BaseClass.BaseController {
             this.frmInsertUpdateClockIndex.getCboMonth().setSelectedIndex((int)electricIndex.getNumMonth() - 1);
             this.frmInsertUpdateClockIndex.getTxtClockCode().setText(electricIndex.getClockCode());
         }else{
-              this.frmInsertUpdateClockIndex.getNumClockIndexID().setValue(-1);
+              this.frmInsertUpdateClockIndex.getNumClockIndexID().setValue((int)-1);
         this.frmInsertUpdateClockIndex.getTxtClockCode().setText(this.customer.getClockCode());
         long millis=System.currentTimeMillis();  
         Date date=new java.sql.Date(millis);
@@ -155,6 +155,7 @@ public class InsertUpdateClockController extends BaseClass.BaseController {
           this.frmInsertUpdateClockIndex.getNumClockIndexID().setEditable(b);
        this.frmInsertUpdateClockIndex.getNumClockIndex().setEditable(b);
        this.frmInsertUpdateClockIndex.getTxtClockCode().setEditable(b);
+        this.frmInsertUpdateClockIndex.getNumYear().setEditable(b);
      this.frmInsertUpdateClockIndex.getdteCreatedDate().setEditable(b);
      this.frmInsertUpdateClockIndex.getCboMonth().setEditable(b);
     }
