@@ -58,9 +58,27 @@ public class AccountObjectUltil {
     public static Customer GetCustomerByID(long ID) throws SQLException, ClassNotFoundException {
         String stoName = "ProGetCustomerByID";
         ResultSet rs = DBUltil.ExcuteQuery(stoName,ID);
-        Customer customer = new Customer();
+        Customer customer = null;
         if (rs.next()) {
-            
+            customer=new Customer();
+            customer.setId(rs.getInt(ColumnName.AOAccountObjectID));
+            customer.setCode(rs.getNString(ColumnName.AOAccountObjectCode));
+            customer.setIntcontractType(rs.getInt(ColumnName.ContractType));
+            customer.setIntVoltType(rs.getInt(ColumnName.VoltageType));
+            customer.setAddress(rs.getNString(ColumnName.AOAccountAddress));
+            customer.setClockCode(rs.getNString(ColumnName.ClockCode));
+            customer.setPhoneNumber(rs.getNString(ColumnName.AOPhoneNumber));
+            customer.setName(rs.getNString(ColumnName.AOAccountObjectName));
+         
+        }
+        return customer;
+    }
+     public static Customer GetCustomerByCode(String code) throws SQLException, ClassNotFoundException {
+        String stoName = "ProGetCustomerByCode";
+        ResultSet rs = DBUltil.ExcuteQuery(stoName,code);
+        Customer customer = null;
+        if (rs.next()) {
+            customer=new Customer();
             customer.setId(rs.getInt(ColumnName.AOAccountObjectID));
             customer.setCode(rs.getNString(ColumnName.AOAccountObjectCode));
             customer.setIntcontractType(rs.getInt(ColumnName.ContractType));
