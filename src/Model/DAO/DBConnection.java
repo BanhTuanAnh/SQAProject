@@ -24,14 +24,17 @@ public class DBConnection {
 
     // Kết nối vào SQLServer.
     // (Sử dụng thư viện điều khiển SQLJDBC)
-    public static Connection getSQLServerConnection()
-            throws SQLException, ClassNotFoundException {
-        if (conn == null) {
-            return getSQLServerConnection(hostName, sqlInstanceName,
-                    database);
-        } else {
-            return conn;
+    public static Connection getSQLServerConnection() {
+        try {
+            if (conn == null) {
+                return getSQLServerConnection(hostName, sqlInstanceName,
+                        database);
+            } else {
+                return conn;
+            }
+        } catch (Exception e) {
         }
+        return null;
     }
 
     // Trường hợp sử dụng SQLServer.
@@ -61,7 +64,7 @@ public class DBConnection {
     public static Connection getSQLServerConnection(String hostName,
             String sqlInstanceName, String database, String userName,
             String password) throws ClassNotFoundException, SQLException {
-        if(conn == null){
+        if (conn == null) {
             // Khai báo class Driver cho DB SQLServer
             // Việc này cần thiết với Java 5
             // Java6 tự động tìm kiếm Driver thích hợp.

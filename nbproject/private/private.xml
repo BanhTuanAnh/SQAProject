@@ -3,27 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/Controller/pnlCustomerController.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/AccountObjectUltil.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main/Controller/frmMainController.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/Controller/frmCustomerDetailController.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/Controller/frmInvoiceDetailController.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmPayBill.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/Common/pnlBussinessAccounting.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Main/View/frmMain.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/frmCreateContract.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Customer/View/pnlCustomer.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/Controller/BussinessAccountingController.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/Controller/AccountingController.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/View/frmInvoiceDetail.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/DBUltil.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/Controller/CommonAccountingController.java</file>
             <file>file:/F:/MonHoc/SQA/BTL/SQAProject/test/TestAccountObject.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/CaculateElectricAmountUltil.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/CaculateResult.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/Entity/DetailResult.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Feature/View/Bussiness/pnlCommonAccounting.java</file>
-            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Invoice/View/pnlInvoice.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/DBConnection.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/test/testCaculateElectricAmount.java</file>
+            <file>file:/F:/MonHoc/SQA/BTL/SQAProject/src/Model/DAO/DBUltil.java</file>
         </group>
     </open-files>
 </project-private>
