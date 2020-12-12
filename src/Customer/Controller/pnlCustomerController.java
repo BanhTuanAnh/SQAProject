@@ -135,6 +135,7 @@ public class pnlCustomerController extends BaseController {
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(pnlCustomerController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
 
     }
 

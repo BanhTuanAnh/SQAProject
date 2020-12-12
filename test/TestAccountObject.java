@@ -153,7 +153,40 @@ public class TestAccountObject {
         return;
 
     }
+@Test
+    public void testInsertCustomer0() throws SQLException, ClassNotFoundException {
+          Connection conn = DBConnection.getSQLServerConnection();
+        try {
+                        conn.setAutoCommit(false);
+            Customer customer;
+        AccountObjectUltil.DeleteCustomerByID(99);
+        customer = new Customer();
+        customer.setId(1);
+        customer.setCode("KH99");
+        customer.setIntcontractType(0);
+        customer.setIntVoltType(0);
+        customer.setAddress("Hà Nội");
+        customer.setClockCode("");
+        customer.setPhoneNumber("0123");
+        customer.setName("test customer");
+        AccountObjectUltil.InsertUpdateCustomer(customer);
+        
+        customer = AccountObjectUltil.GetCustomerByCode("KH99");
 
+        Assert.assertNotNull(customer);
+        } catch (Exception e) {
+        }finally{
+             try{
+                conn.rollback();
+                conn.setAutoCommit(true);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        
+        return;
+    }
+    
     @Test
     public void testInsertCustomer() throws SQLException, ClassNotFoundException {
           Connection conn = DBConnection.getSQLServerConnection();
